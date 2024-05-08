@@ -1,0 +1,153 @@
+@import './components/Colors.scss';
+@import './components/Fonts.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  // text-decoration: none;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  background-color: cadetblue;
+  width: 100%;
+  height: 75px;
+
+  .nav_logo {
+    padding: 15px;
+
+    .nav_brand {
+      margin-left: 5px;
+    }
+
+    .nav_icon {
+      margin-left: 200px;
+    }
+  }
+
+  .nav_ul {
+    ul {
+      list-style: none;
+      background-color: red;
+      width: 100%;
+      text-align: center;
+
+      li {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+.navbar_active {
+  display: none;
+}
+
+footer {
+  width: 100%;
+  // adjust this height after formatting
+  // height: 700px;
+  color: $grey;
+  background-color: $brBlack;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  font-size: 13px;
+
+  .footer_section1 {
+    border-bottom: 1px solid $brown;
+    text-align: center;
+
+    .footer_section1_title {
+      color: white;
+      font-size: 15px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    input {
+      display: block;
+      margin: 0 auto;
+      background-color: $brown;
+      height: 30px;
+      width: 225px;
+      padding: 10px;
+      border: none;
+    }
+
+    .footer_submit {
+      background-color: $orange;
+      border: none;
+      padding: 4px;
+      position: relative;
+      bottom: 26px;
+      left: 83px;
+    }
+  }
+
+  .footer_section1,
+  .footer_section2,
+  .footer_section3,
+  .footer_section4 {
+    padding: 15px;
+  }
+
+  .footer_section2 {
+    .footer_brand {
+      color: white;
+      margin: 0 0 8px 5px;
+      display: inline-block;
+      font-size: 15px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .footer_read {
+      color: $orange;
+    }
+  }
+
+  .footer_section3 {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    padding: 10px 2px;
+
+    ul li:first-child {
+      font-weight: bold;
+      color: white;
+      margin-bottom: 5px;
+    }
+
+    ul li {
+      margin-bottom: 5px;
+    }
+  }
+
+  .footer_section4 {
+    text-align: center;
+  }
+}
+
+// browser starts at 385px x 736
+// 575, 768, 992, 1200, 1300
+@media (min-width: 575px) {
+  nav {
+    .nav_logo {
+      .nav_icon {
+        margin-left: 375px;
+      }
+    }
+  }
+}
